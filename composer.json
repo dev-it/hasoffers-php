@@ -1,0 +1,17 @@
+{
+    "name": "devit/hasoffers-php-client",
+    "description": "A clean & simple PHP Wrapper around the HasOffers API",
+    "keywords": ["hasoffers", "affiliate"],
+    "license": "MIT",
+    "authors": [
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevIT\\HasOffers\\": "src/"
+        }
+    }
+}
