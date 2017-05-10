@@ -1,5 +1,5 @@
 <?php
-namespace DevIT\HasOffers;
+namespace DevIT\Hasoffers;
 
 use GuzzleHttp\Client as GuzzleClient;
 

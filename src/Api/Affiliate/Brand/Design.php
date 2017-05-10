@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Affiliate\Brand;
+namespace DevIT\Hasoffers\Api\Affiliate\Brand;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class Design extends Base
 {

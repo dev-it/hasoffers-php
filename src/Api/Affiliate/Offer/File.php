@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Affiliate\Offer;
+namespace DevIT\Hasoffers\Api\Affiliate\Offer;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class File extends Base
 {

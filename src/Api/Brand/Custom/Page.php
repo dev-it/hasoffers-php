@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Brand\Custom;
+namespace DevIT\Hasoffers\Api\Brand\Custom;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class Page extends Base
 {

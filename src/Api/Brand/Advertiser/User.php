@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Brand\Advertiser;
+namespace DevIT\Hasoffers\Api\Brand\Advertiser;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class User extends Base
 {

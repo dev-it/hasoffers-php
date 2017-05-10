@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Affiliate;
+namespace DevIT\Hasoffers\Api\Affiliate;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class ApiKey extends Base
 {

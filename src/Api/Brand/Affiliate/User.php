@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Brand\Affiliate;
+namespace DevIT\Hasoffers\Api\Brand\Affiliate;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class User extends Base
 {

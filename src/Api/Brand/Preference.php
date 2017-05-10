@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Brand;
+namespace DevIT\Hasoffers\Api\Brand;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class Preference extends Base
 {

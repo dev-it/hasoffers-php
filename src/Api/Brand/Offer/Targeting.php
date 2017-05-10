@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Brand\Offer;
+namespace DevIT\Hasoffers\Api\Brand\Offer;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class Targeting extends Base
 {

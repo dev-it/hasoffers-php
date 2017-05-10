@@ -1,7 +1,7 @@
 <?php
-namespace DevIT\HasOffers\Api\Conversion;
+namespace DevIT\Hasoffers\Api\Conversion;
 
-use DevIT\HasOffers\Base;
+use DevIT\Hasoffers\Base;
 
 class Meta extends Base
 {
