@@ -89,7 +89,7 @@ class Client
      */
     public function api($class)
     {
-        $class = "DevIT\\HasOffers\\Api\\".$class;
+        $class = "DevIT\\Hasoffers\\Api\\".$class;
 
         return new $class($this);
     }
