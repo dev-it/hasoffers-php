@@ -130,14 +130,6 @@ class Client
             case 'Affiliate':
                 $url = sprintf($this->apiUrlAffiliate, $this->getNetworkId(), $this->getApiType(), $this->getApiNamespace(), $apiMethod, $this->getApiKey());
             break;
-
-            case 'YeahMobi':
-                $url = sprintf($this->apiUrlYeahMobi, $apiMethod, $this->getApiKey());
-            break;
-
-            case 'FurtherMobi':
-                $url = sprintf($this->apiUrlFurtherMobi, $apiMethod, $this->getApiKey());
-            break;
         }
 
         return $url.'&'.http_build_query($parameters);
@@ -202,45 +194,6 @@ class Client
         $this->apiUrlBrand = $apiUrlBrand;
     }
 
-    /**
-     * Get the YeahMobi API Base URL.
-     *
-     * @return string
-     */
-    public function getApiUrlYeahMobi()
-    {
-        return $this->apiUrlYeahMobi;
-    }
-
-    /**
-     * Set the YeahMobi API Base URL.
-     *
-     * @param string $apiUrlYeahMobi
-     */
-    public function setApiUrlYeahMobi($apiUrlYeahMobi)
-    {
-        $this->apiUrlYeahMobi = $apiUrlYeahMobi;
-    }
-
-    /**
-     * Get the FurtherMobi API Base URL.
-     *
-     * @return string
-     */
-    public function getApiUrlFurtherMobi()
-    {
-        return $this->apiUrlFurtherMobi;
-    }
-
-    /**
-     * Set the FurtherMobi API Base URL.
-     *
-     * @param string $apiUrlFurtherMobi
-     */
-    public function setApiUrlFurtherMobi($apiUrlFurtherMobi)
-    {
-        $this->apiUrlFurtherMobi = $apiUrlFurtherMobi;
-    }
 
     /**
      * Get the HTTP Headers.
