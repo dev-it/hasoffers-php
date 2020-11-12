@@ -1,5 +1,6 @@
 <?php
-namespace DevIT\Hasoffers\Api\Conversion;
+
+namespace DevIT\Hasoffers\Api\Brand\ConversionMeta;
 
 use DevIT\Hasoffers\Base;
 
@@ -18,6 +19,7 @@ class Meta extends Base
      * @var string
      */
     protected $endpointName = 'ConversionMeta';
+
     /**
      * Creates Conversion Meta with data properties by data[conversion_id].
      *

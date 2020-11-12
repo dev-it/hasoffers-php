@@ -1,7 +1,8 @@
 <?php
-namespace DevITHasOffers\Api\Brand\Offer;
 
-use DevITHasOffers\Base;
+namespace DevIT\Hasoffers\Api\Brand\Offer;
+
+use DevIT\Hasoffers\Base;
 
 class Whitelist extends Base
 {
@@ -18,6 +19,7 @@ class Whitelist extends Base
      * @var string
      */
     protected $endpointName = 'OfferWhitelist';
+
     /**
      * Create an Offer Whitelist.
      *
