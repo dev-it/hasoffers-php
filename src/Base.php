@@ -1,4 +1,5 @@
 <?php
+
 namespace DevIT\Hasoffers;
 
 class Base
@@ -92,7 +93,7 @@ class Base
     /**
      * Get the API Endpoint Name.
      *
-     * @return object
+     * @return string
      */
     public function getEndpointName()
     {
