@@ -1,6 +1,8 @@
 <?php
+
 namespace DevIT\Hasoffers;
 
+use Exception;
 use GuzzleHttp\Client as GuzzleClient;
 
 class Client
@@ -73,11 +75,15 @@ class Client
 
         $this->setNetworkId($networkId);
 
-        $this->setHttpClient(new GuzzleClient([
-            'defaults' => [
-                'headers'  => $this->getHeaders(),
-            ],
-        ]));
+        $this->setHttpClient(
+            new GuzzleClient(
+                [
+                    'defaults' => [
+                        'headers' => $this->getHeaders(),
+                    ],
+                ]
+            )
+        );
     }
 
     /**
@@ -101,13 +107,14 @@ class Client
      * @param array  $parameters
      *
      * @return object
+     * @throws Exception
      */
     public function get($apiMethod, $parameters = [])
     {
         $requestUrl = $this->buildUrl($apiMethod, $parameters);
         $requestUrl = urldecode($requestUrl);
 
-        $response   = $this->getHttpClient()->get($requestUrl);
+        $response = $this->getHttpClient()->get($requestUrl);
 
         return $this->handleResponse($response);
     }
@@ -116,20 +123,34 @@ class Client
      * Build the request url.
      *
      * @param string $apiMethod
-     * @param array  $parameter
+     * @param        $parameters
      *
      * @return string
      */
     private function buildUrl($apiMethod, $parameters)
     {
+        $url = null;
         switch ($this->getApiType()) {
             case 'Brand':
-                $url = sprintf($this->apiUrlBrand, $this->getNetworkId(), $this->getApiNamespace(), $apiMethod, $this->getApiKey());
-            break;
+                $url = sprintf(
+                    $this->apiUrlBrand,
+                    $this->getNetworkId(),
+                    $this->getApiNamespace(),
+                    $apiMethod,
+                    $this->getApiKey()
+                );
+                break;
 
             case 'Affiliate':
-                $url = sprintf($this->apiUrlAffiliate, $this->getNetworkId(), $this->getApiType(), $this->getApiNamespace(), $apiMethod, $this->getApiKey());
-            break;
+                $url = sprintf(
+                    $this->apiUrlAffiliate,
+                    $this->getNetworkId(),
+                    $this->getApiType(),
+                    $this->getApiNamespace(),
+                    $apiMethod,
+                    $this->getApiKey()
+                );
+                break;
         }
 
         return $url.'&'.http_build_query($parameters);
@@ -141,17 +162,18 @@ class Client
      * @param object $response
      *
      * @return object
+     * @throws Exception
      */
     private function handleResponse($response)
     {
         $statusCode = $response->getStatusCode();
-        $body = json_decode($response->getBody());
+        $body = json_decode($response->getBody(), true);
 
         if ($statusCode >= 200 && $statusCode < 300) {
             return $body;
         }
 
-        throw new \Exception($response->getBody(), $statusCode);
+        throw new Exception($response->getBody(), $statusCode);
     }
 
     /**
